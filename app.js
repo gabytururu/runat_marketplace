@@ -19,4 +19,16 @@ app.use(express.urlencoded({extended:true}))
 app.get('/',(req,res)=>{
     res.render('index')
 })
+app.get('/project-add',(req,res)=>{
+    res.render('projectAdd')
+})
+app.get('/project',(req,res)=>{
+    res.render('projectLanding')
+})
+app.get('/project-list',(req,res)=>{
+    res.render('projectsList')
+})
+app.use((req,res)=>{
+    res.status(404).render('404')
+})
 
