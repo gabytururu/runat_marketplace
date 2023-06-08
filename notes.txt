@@ -1,0 +1,11 @@
+/? - si quieres saber mas de un comando añade /?
+help - lista de comandos disponibles
+dir - comando más conocido de DOS sirve para ver el contenido de una carpeta
+cd - sirve para entrar en una carpeta o salir de ella
+clear - limpia la consola
+mkdir - sirve para crear una carpeta nueva
+rmdir - sirve para eliminar una carpeta
+move y copy - sirven para mover y copiar archivos debes indicar el nombre del archivo con su ruta (en caso de que la ruta sea en otra carpeta a donde estás) y la ruta destino
+rename - sirve para renombrar un archivo o carpeta. hay que indicar el nombre original y el definitivo
+del - sirve para eliminar un archivo. no irá a la papelera sino que la elimina desde raíz
+rd - sirve para eliminar carpetas
