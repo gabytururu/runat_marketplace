@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <%-include ('./partials/head.ejs')%>
    
-<body>
-    <%-include ('./partials/nav.ejs')%>
-    <main>
-        <h1>Nombre del Projecto</h1>
-        <div class="foto-main" id="foto-nombreProyecto">
-            <img src="" alt="">
-        </div>
-        <div class="detalles" id="detalles-nombreProyecto">
-            <h2>Sobre este proyecto</h2>
-            <h3>Ubicación:</h3><span><p>Tabasco</p></span>
-            <h3>Categoría:</h3><span><p>Ecoturismo</p></span>
-            <h3>Actividades:</h3><span><p>Avistamiento de aves, camping, senderismo</p></span>
-        </div>
-    </main>
-    <%-include ('./partials/footer.ejs')%>
-</body>
+    <body>
+        <div class="wrap">
+            <%-include ('./partials/nav.ejs')%>
+            <main>
+                <h1>Nombre del Projecto</h1>
+                <div class="foto-main" id="foto-nombreProyecto">
+                    <img src="/public/imgs/landing.jpg" alt="">
+                </div>
+                <div class="detalles" id="detalles-nombreProyecto">
+                    <h2>Sobre este proyecto</h2>
+                    <h3>Ubicación:</h3><span><p>Tabasco</p></span>
+                    <h3>Categoría:</h3><span><p>Ecoturismo</p></span>
+                    <h3>Actividades:</h3><span><p>Avistamiento de aves, camping, senderismo</p></span>
+                </div>
+            </main>
+            <%-include ('./partials/footer.ejs')%>
+        </div>  
+    </body>
+
 </html>

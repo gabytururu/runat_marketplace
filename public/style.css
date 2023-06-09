@@ -1,0 +1,133 @@
+*{
+    font-family:'Lucida Sans';
+    margin:0
+}
+
+body{
+    background-color: white;
+}
+
+footer{
+    background-color: black;
+    min-height: 10vh; 
+    width: auto;
+    color:beige;
+    font-size:10px;
+    text-align:center;
+    padding:5px
+}
+nav{
+    background-color: black;
+    min-height: 10vh;   
+    width: auto;
+}
+
+nav a{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.wrap{
+    width:100%;
+    max-width: 960px;
+    margin: 0 auto;
+   
+}
+
+.backdrop{
+    background-image: url('./imgs/original.png');
+    min-height:480px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding:35px;
+    background-color: 
+}
+
+.backdrop h1{
+    font-size: 45px;
+    margin-bottom: 15px;
+    
+}
+
+.map-container{
+    text-align: center;
+    margin-top:25px;
+    background-color:green
+}
+
+.map{
+    flex-basis:1 0 250px;
+    background-color:blanchedalmond; 
+    min-height: 320px;
+    margin: 35px;
+    border-radius:8px;
+}
+
+.category-pics-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.category-pics-container h2{ 
+    background-color: red;
+    text-align: center;
+}
+
+.flex-pics-container{
+ display:flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ background-color: blue;
+}
+
+.box{
+    height:200px;
+    border-radius: 7px;
+    margin:25px 50px;
+    cursor:pointer;
+    flex: 0 0 320px;
+    /* max-width: 300px; */
+    /* means ->flexgrowth1, shrink0, basis180, sustituye: */
+      /* flex-grow:1; */
+      /* flex-shrink:0; */
+      /* flex-basis:180px */
+      /* min-width:180px; same as flexbasis but flexbasis is more powerful bc when it hits the limit min (180px here) it will make the boxes shrink instead of pulling the scrollbar */
+}
+
+.btn-container{
+    background-color: aqua;
+    padding: 25px;
+    text-align: center;
+}
+
+
+.btn{
+    text-align: center;
+    padding:15px;
+    border-radius: 7px;
+    border: none;
+    cursor:pointer
+    padding;  
+    width: 300px; 
+    cursor: pointer;
+    background-color: #ffc803ff;
+    font-size:15px
+    
+}
+
+
+.blog-container{
+    background-color: purple;
+    min-height: 550px;
+    text-align: center;
+    padding:35px
+}
