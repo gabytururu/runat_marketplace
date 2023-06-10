@@ -7,24 +7,59 @@
 body{
     background-color: white;
 }
-footer{
+footer {
     background-color: black;
     min-height: 10vh; 
     width: auto;
     color:beige;
-    font-size:10px;
-    text-align:center;
-    padding:5px
+    font-size:12px;
+    /* position:relative */
+   
+    
 }
+
+footer p{
+    text-align:center;
+    padding:35px;
+    /* position:absolute;
+    top:50%, translateY(-50);
+    margin:auto */
+
+}
+
 nav{
     background-color: black;
-    min-height: 10vh;   
+    min-height: 8vh;   
     width: auto;
+    display:flex;
+    align-items: center;
+   
+}
+
+.menu{
+    width:75%;
+    
+}
+
+nav ul{
+    display:flex;
+    justify-content: right; 
+    margin-right:80px
+}
+
+nav li{
+    padding:25px;
+    text-align:center
+
 }
 nav a{
     color:white;
     text-decoration: none;
     cursor: pointer;
+}
+.logo{
+    background-color: yellow;
+    min-width: 25%
 }
 
 /* ================= Index/Home ======================== */
@@ -33,6 +68,7 @@ nav a{
     max-width: 960px;
     margin: 0 auto;
 }
+/* check min19 to improve (position stuff) --> https://www.youtube.com/watch?v=QVgi57C3pLA */
 .backdrop{
     background-image: url('./imgs/original.png');
     min-height:480px;
@@ -48,6 +84,7 @@ nav a{
     padding:35px;
     
 }
+
 .backdrop h1{
     font-size: 45px;
     margin-bottom: 15px;
@@ -214,3 +251,30 @@ nav a{
 .project-map iframe{
     text-align:center
 }
+
+/* ================= Project Add Form ======================== */
+.generales{
+    display:flex;
+    flex-direction:column
+}
+.actividades{
+    display:flex;
+    flex-direction:column
+}
+
+.servicios{
+    display:flex;
+    flex-direction:column
+}
+
+input{
+    padding:8px;
+    border-radius:8px;
+    border:1px solid gray;
+}
+
+select{
+    padding:8px;
+    border-radius:8px
+}
+

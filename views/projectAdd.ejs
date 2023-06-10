@@ -3,10 +3,90 @@
     <%-include ('./partials/head.ejs')%>
    
 <body>
-    <div class="wrap">
-        <%-include ('./partials/nav.ejs')%>
+    <%-include ('./partials/nav.ejs')%>
+    <div class="wrap">        
         <form>
-            <h1>Aqui ira la Form de Creación</h1>
+            <h1>Registro de Proyectos de Ecoturismo, Naturaleza y Aventura</h1>
+            <h2>¡Gracias por tu interés en resgistrar tu proyecto!</h2>
+            <p>Por favor rellena todos los campos siguientes para poder realizar tu registro</p>
+            
+            <h3>Datos Generales</h3>
+            <label for="name">Nombre del Proyecto:</label>
+            <input type="text" id="name" name="name" required>  
+            <label for="tiempo">Años en Operación Contínua</label>
+            <select name="tiempo">
+                <option value="1">Un año o menos</option>
+                <option value="1">Entre 1 y 2 años</option>
+                <option value="1">Entre 2 y 5 años</option>
+                <option value="1">Más de 5 años</option>
+            </select>
+
+            <div class="generales">
+                <h3>Contactos Principales</h3>   
+                <label for="tel">Teléfono para clientes (reservaciones, dudas etc):</label>
+                <input type="number" id="tel" name="tel"> 
+                <label for="whatsapp">Whatsapp para clientes (reservaciones, dudas etc):</label>
+                <input type="number" id="whatsapp" name="whatsapp" required>      
+                <label for="contactoAdmin">Teléfono de contacto operativo/administrativo del proyecto (entrevistas, datos faltantes, etc):</label>
+                <input type="number" id="contactoAdmin" name="contactoAdmin" required>      
+                <label for="email">Correo electrónico(e-mail):</label>
+                <input type="number" id="email" name="email" required>      
+                <label for="name">Nombre del Proyecto:</label>
+                <input type="text" id="name" name="name" required>      
+                <h3>Dirección</h3>
+                <label for="calle">Nombre de calle y número</label>
+                <input type="text" id="calle" name="calle" required>
+                <label for="colonia">Colonia:</label>
+                <input type="text" id="colonia" name="colonia" required>
+                <label for="ciudad">Ciudad/Municipio:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+                <label for="codigoPostal">Estado:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal" required>
+                <label for="pais">Estado:</label>
+                <input type="text" id="pais" name="pais">
+                <label for="pics">Fotografías del Proyecto</label>
+                <input type="file" id="pics" name="pics">
+                <label for="team">Fotografías del equipo</label>
+                <input type="file" id="team" name="team">
+            </div>
+
+            <div class="actividades">
+                <h3>Por favor indique las actividades que están accesibles y desarrolladas para recibir visitantes en su proyecto</h3>
+                <label><input type="checkbox" id="senderismo" value="senderismo">Senderos para senderismo</label>
+                <label><input type="checkbox" id="bici" value="bici">Senderos para bicicleta</label>
+                <label><input type="checkbox" id="camping" value="camping">Espacios acondicionados para camping</label>
+                <label><input type="checkbox" id="montaña" value="montaña">Senderos y guías para ascenso a una montaña (alpinismo)</label>
+                <label><input type="checkbox" id="kayak" value="kayak">Canotaje, kayak o similar</label>
+                <label><input type="checkbox" id="avistamiento" value="avistamiento">Avistamiento de especies de flora o fauna</label>
+                <label><input type="checkbox" id="escalada" value="escalada">Vías o boulders graduados de escalada en roca</label>
+                <label><input type="checkbox" id="rappel" value="rappel">Rappel, cañonismo o similar</label>
+                <label><input type="checkbox" id="nadar" value="nadar">Cuerpo de agua natural para nadar (cascada, lago, río o equivalente)</label>    
+            </div>
+           
+           <!-- cuenta con todo el equipo PARA XXXX-->
+            <div class="servicios">
+                <h3>Seleccione los servicios e infraestructura disponibles y accesibles para ofrecer a sus visitantes en su proyecto</h3>
+                <label><input type="checkbox" id="bañosSecos" value="bañosSecos">Servicios sanitarios mediante baño seco o letrina</label>
+                <label><input type="checkbox" id="baños" value="baños">Servicios de baños conectados a drenaje</label>
+                <label><input type="checkbox" id="regaderas" value="regaderas">Servicios de Regaderas</label>
+                <label><input type="checkbox" id="regaderas" value="regaderas">Cabañas o bungalows para pernoctar</label>
+                <label><input type="checkbox" id="regaderas" value="regaderas">Hostal compartido para pernoctar</label>
+                <label><input type="checkbox" id="alimentos" value="alimentos">Servicio de alimentos (solo alimentos locales, cocina tradicional etc)</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Servicio de alimentos especiales (ej. opciones veganas, libre de gluten, u otras dietas especiales a solicitud del cliente)</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Guías locales capacitados pero no certificados</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Guías certificados oficialmente</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Servicio especial de emergencias (ej. vinculación a equipo médico de emergencias, rescatistas, etc)</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Seguro de accidentes</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Seguridad nocturna para campistas (ej. velador o alguien del personal disponible)</label>
+                <label><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Internet/WIFI en algunos puntos del lugar</label>            
+                <textarea name="descripcion" cols="30" rows="10">Describa brevemente su proyecto destaque los elementos que considera le dan un valor agregado (ej. reconocimientos recibidos, prácticas de sustentabilidad, impacto social etc)</textarea>
+                <textarea name="descripcion" cols="30" rows="10">¿Hay algún Comentario Final que quiera agregar o aclarar respecto a las ociones seleccionadas en este formulario?</textarea>
+            </div>
+
+            
+            
         </form>
 
         <%-include ('./partials/footer.ejs')%>
