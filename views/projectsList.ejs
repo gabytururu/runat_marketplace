@@ -4,12 +4,17 @@
    
 <body>
     <%-include ('./partials/nav.ejs')%>
-    <div class="wrap">
-        <div class="projects list">
-            Aqui ira la project list? o corresponde al index?
-        </div>
-
-        <%-include ('./partials/footer.ejs')%>
+    <div class="wrap-search">
+        <label class="titulo" for="categoria">¿Qué Categoría de proyectos Buscas?</label>
+        <div class="actividades"><select id="actividades">
+            <option label="escalada">Escalada</option>
+            <option label="bici">Bici</option>
+            <option label="senderismo">Senderismo</option>
+        </select></div>
+        <div class="projects-list">
+            
+        </div>  
     </div>
+    <%-include ('./partials/footer.ejs')%>
 </body>
 </html>

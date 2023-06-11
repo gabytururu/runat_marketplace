@@ -4,8 +4,18 @@
    
 <body>
     <%-include ('./partials/nav.ejs')%>
-    <div class="wrap">        
-        <form class="form-box">
+    <div class="wrap">  
+        <form class="generales">
+            <label class="label-text" for="name">Nombre:</label>
+            <input type="text" id="name" name="name"> 
+            <label class="label-text" for="category">Category:</label>
+            <input type="text" id="category" name="category"> 
+            <label class="label-check" for="description">Describe tu proyecto:</label>            
+            <textarea id="description" name="descripcion" cols="30" rows="10" placeholder="[nombre del proyecto] es una propuesta de ..."></textarea>
+                
+        </form>
+        
+        <!-- <form class="form-box">
             <h1>Registro de Proyectos de Ecoturismo, Naturaleza y Aventura</h1>
             <h2>¡Gracias por tu interés en resgistrar tu proyecto!</h2>
             <p>Por favor rellena todos los campos siguientes para poder realizar tu registro</p>
@@ -65,7 +75,6 @@
                 <label class="label-check"><input type="checkbox" id="nadar" value="nadar">Cuerpo de agua natural para nadar (cascada, lago, río o equivalente)</label>    
             </div>
            
-           <!-- cuenta con todo el equipo PARA XXXX-->
             <div class="servicios">
                 <h3 class="query-category">Seleccione los servicios e infraestructura disponibles y accesibles para ofrecer a sus visitantes en su proyecto</h3>
                 <label class="label-check"><input type="checkbox" id="bañosSecos" value="bañosSecos">Servicios sanitarios mediante baño seco o letrina</label>
@@ -83,11 +92,8 @@
                 <label class="label-check"><input type="checkbox" id="alimentosEsp" value="alimentosEsp">Internet/WIFI en algunos puntos del lugar</label>            
                 <textarea name="descripcion" cols="30" rows="10">Describa brevemente su proyecto destaque los elementos que considera le dan un valor agregado (ej. reconocimientos recibidos, prácticas de sustentabilidad, impacto social etc)</textarea>
                 <textarea name="descripcion" cols="30" rows="10">¿Hay algún Comentario Final que quiera agregar o aclarar respecto a las ociones seleccionadas en este formulario?</textarea>
-            </div>
-
-            
-            
-        </form>
+            </div>              
+        </form> -->
 
         <%-include ('./partials/footer.ejs')%>
     </div>
