@@ -323,9 +323,7 @@ input[type=checkbox]:checked+label{
 .label-text{
     margin-top:10px
 }
-.label-text{
-    transform-origin: ;
-}
+
 
 select option {
     width: 100%;
