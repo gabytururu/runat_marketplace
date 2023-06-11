@@ -5,14 +5,14 @@
 <body>
     <%-include ('./partials/nav.ejs')%>
     <div class="wrap">  
-        <form class="generales">
-            <label class="label-text" for="name">Nombre:</label>
-            <input type="text" id="name" name="name"> 
-            <label class="label-text" for="category">Category:</label>
-            <input type="text" id="category" name="category"> 
+        <form class="generales" action="/project-add" method="POST">
+            <label class="label-text" for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"> 
+            <label class="label-text" for="categoria">Category:</label>
+            <input type="text" id="categoria" name="categoria"> 
             <label class="label-check" for="description">Describe tu proyecto:</label>            
-            <textarea id="description" name="descripcion" cols="30" rows="10" placeholder="[nombre del proyecto] es una propuesta de ..."></textarea>
-                
+            <textarea id="description" name="description" cols="30" rows="10" placeholder="[nombre del proyecto] es una propuesta de ..."></textarea>
+            <button>Submit</button>
         </form>
         
         <!-- <form class="form-box">
