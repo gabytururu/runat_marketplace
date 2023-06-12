@@ -8,11 +8,9 @@ const puerto = process.env.PORT
 const dbkey = process.env.MONGODB_KEY
 
 
-
 const app = express();
 
 
-const dbURI = 'mongodb+srv://gabriela:wO2Mjvm7zojeyD7T@cluster0testgaby.l3ofz0y.mongodb.net/runat-proyectos?retryWrites=true&w=majority'
 mongoose.connect(dbkey,{useNewUrlParser:true, useUnifiedTopology:true})
     .then((result)=> app.listen(puerto))
     .catch((err)=> console.log(err))
