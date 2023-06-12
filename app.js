@@ -38,7 +38,13 @@ app.post('/project-add',(req,res)=>{
 
 
 app.get('/',(req,res)=>{
-    res.render('index')
+    //res.render('index')
+    Proyecto.find().sort({createdAt: -1})
+        .then((result)=>{
+            res.render('index',{proyectos:result})
+        })
+        .catch((err)=>{console.log(err)})
+
 })
 app.get('/project-add',(req,res)=>{
     res.render('projectAdd')

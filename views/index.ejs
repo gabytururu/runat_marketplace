@@ -12,7 +12,8 @@
     <div class="wrap">       
             <div class="map-container">
                 <h2>Encuentra proyectos de ecoturismo, naturaleza y aventura en México</h2>
-                <div class="map" id="mapa-projectos">
+                <div class="project-map" id="mapa-projectos">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7557.071576115275!2d-99.11738017530558!3d18.7295899991502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce799ae5af9029%3A0xcab19f2a3210db76!2s62774%20Estacas%2C%20Mor.!5e0!3m2!1ses!2smx!4v1686355298975!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -25,12 +26,25 @@
                     <img class="box one" src="/imgs/square.jpg"/>
                 </div>       
                 <div class="btn-container">
-                    <button class="btn">Ver todos los Proyectos</button>
+                    <a href="/project-list"><button class="btn">Ver todos los Proyectos</button></a>
                 </div>         
             </div>
 
             <div class="blog-container">
                 <h2>Tips, Experiencias & Inspiración para tus viajes a la naturaleza</h2>
+                <div class="projects-container">
+                    <% if(proyectos.length>0){ %>
+                        <% proyectos.forEach(proyecto =>{ %> 
+                            <div class="project-link"><a href="/proyect-list/<%=proyecto._id%>">
+                                <h3 class="proyeto-nombre"><%= proyecto.nombre%></h3>
+                                <p class="proyecto-categoria"><%=proyecto.categoria%></p>
+                                <p class="proyecto-description"><%=proyecto.description%></p>
+                            </a></div>
+                    <% }) %>
+                    <% } else{ %>
+                        <p> ay perdón no tenemos proyectos aún :( </p>
+                    <% } %>
+                </div>
             </div>
 
        
