@@ -6,8 +6,6 @@ require('dotenv').config({path:'./.env'})
 
 const puerto = process.env.PORT
 const dbkey = process.env.MONGODB_KEY
-
-
 const app = express();
 
 
@@ -29,10 +27,10 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 
 app.post('/project-add',(req,res)=>{
-    console.log(req.body)
     const proyecto = new Proyecto(req.body)
     proyecto.save()
     .then((result)=>{
+        console.log(result)
         res.redirect('/')
     })
     .catch((err)=>{console.log(err)})
@@ -48,8 +46,19 @@ app.get('/project-add',(req,res)=>{
 app.get('/project',(req,res)=>{
     res.render('projectLanding')
 })
+// app.get('/project-list',(req,res)=>{
+//     Proyecto.find()
+//         .then((result)=>{res.send(result)})
+//         .catch((err)=>{console.log(err)})
+//     // res.render('projectsList')
+// })
+
 app.get('/project-list',(req,res)=>{
-    res.render('projectsList')
+    Proyecto.find().sort({createdAt: -1})
+        .then((result)=>{
+            res.render('projectsList', {proyectos:result})
+        })
+        .catch((err)=>{console.log(err)})
 })
 app.use((req,res)=>{
     res.status(404).render('404')

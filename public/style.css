@@ -351,20 +351,54 @@ textarea{
 }
 
 /* ================= Project Lists & Search ======================== */
+.wrap-search{
+    max-width: 1280px;
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    /* background-color: red; */
 
+}
 .titulo{
-    font-size:35px;
-    padding: 45px 35px;
+    font-size:30px;
+    padding: 35px 35px;
     text-align: center;
 }
 
 .actividades{
-    margin:0px 35px
+    margin:auto;
+    
+  
 }
-
 
 .projects-list{
     height: 50vh;
+    background-color: #2716ab;
+}
+
+.projects-container{
+    display:flex;  
+    flex-direction:column;
+    align-items:left;
+    margin:30px;
+    max-width: 1280px;
+}
+
+.project-link{
+    margin: 6px 0px;
+    padding: 6px;
+    border-left: #16ab97be 5px solid;
+    background-color:whitesmoke;
+    border-radius:6px;
+}
+
+.project-link a{
+    text-decoration:none;
+    color: black
+}
+
+.project-link a:hover {
+    color: #16ab97;
 }
 
 

@@ -11,8 +11,18 @@
             <option label="bici">Bici</option>
             <option label="senderismo">Senderismo</option>
         </select></div>
-        <div class="projects-list">
-            
+        <div class="projects-container">
+            <% if(proyectos.length>0){ %>
+                <% proyectos.forEach(proyecto =>{ %> 
+                    <div class="project-link"><a href="/proyect-list/<%=proyecto._id%>">
+                        <h3 class="proyeto-nombre"><%= proyecto.nombre%></h3>
+                        <p class="proyecto-categoria"><%=proyecto.categoria%></p>
+                        <p class="proyecto-description"><%=proyecto.description%></p>
+                    </a></div>
+            <% }) %>
+            <% } else{ %>
+                <p> ay perdón no tenemos proyectos aún :( </p>
+            <% } %>
         </div>  
     </div>
     <%-include ('./partials/footer.ejs')%>
