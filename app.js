@@ -2,13 +2,19 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Proyecto = require('./models/project');
+require('dotenv').config({path:'./.env'})
+
+const puerto = process.env.PORT
+const dbkey = process.env.MONGODB_KEY
+
+
 
 const app = express();
 
 
 const dbURI = 'mongodb+srv://gabriela:wO2Mjvm7zojeyD7T@cluster0testgaby.l3ofz0y.mongodb.net/runat-proyectos?retryWrites=true&w=majority'
-mongoose.connect(dbURI,{useNewUrlParser:true, useUnifiedTopology:true})
-    .then((result)=> app.listen(3000))
+mongoose.connect(dbkey,{useNewUrlParser:true, useUnifiedTopology:true})
+    .then((result)=> app.listen(puerto))
     .catch((err)=> console.log(err))
 
 app.set('view engine', 'ejs')
@@ -33,6 +39,7 @@ app.post('/project-add',(req,res)=>{
     })
     .catch((err)=>{console.log(err)})
 })
+
 
 app.get('/',(req,res)=>{
     res.render('index')
