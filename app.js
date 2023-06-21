@@ -49,16 +49,16 @@ app.get('/',(req,res)=>{
 app.get('/project-add',(req,res)=>{
     res.render('projectAdd')
 })
-app.get('/project',(req,res)=>{
-    res.render('projectLanding')
-})
+// app.get('/project',(req,res)=>{
+//     res.render('projectLanding')
+// })
+
 // app.get('/project-list',(req,res)=>{
 //     Proyecto.find()
 //         .then((result)=>{res.send(result)})
 //         .catch((err)=>{console.log(err)})
 //     // res.render('projectsList')
 // })
-
 app.get('/project-list',(req,res)=>{
     Proyecto.find().sort({createdAt: -1})
         .then((result)=>{
@@ -66,6 +66,34 @@ app.get('/project-list',(req,res)=>{
         })
         .catch((err)=>{console.log(err)})
 })
+
+app.get('/proyect-list/:id',(req,res)=>{
+    const id= req.params.id
+    console.log(id)
+    Proyecto.findById(id)
+        .then((result)=>{
+            console.log(result)
+            res.render('projectLanding', {proyecto:result})
+            // res.render('projectLanding',{proyecto:result,nombre:result.nombre})
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+})
+
+app.delete('/proyect-list/:id',(req,res)=>{
+    const id= req.params.id
+    Proyecto.findByIdAndDelete(id)
+        .then(result=>{
+            res.json({redirect:'/'})
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+
+})
+
+
 app.use((req,res)=>{
     res.status(404).render('404')
 })

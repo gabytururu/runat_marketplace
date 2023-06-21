@@ -166,10 +166,24 @@ nav a{
     flex-direction: column; 
     /* background-color: red;    */
 }
+.title-container{
+    display: flex;
+    align-items: center;
+}
+.title-container h1{
+    width:85%
+}
+.title-container a{
+    width:15%;
+    border-radius:5px;
+    padding:10px;
+    text-align: center;
+    background-color: #16ab97;
+    cursor: pointer;
+}
 
 .wrap-projectlanding h1{
     margin:25px 15px 25px 0px;
-
 }
 
 .project-pic{
@@ -385,19 +399,35 @@ textarea{
 }
 
 .project-link{
+    display:flex;
+    align-items: center;
     margin: 6px 0px;
     padding: 6px;
     border-left: #16ab97be 5px solid;
     background-color:whitesmoke;
     border-radius:6px;
 }
-
-.project-link a{
-    text-decoration:none;
-    color: black
+.link-container{
+    width:85%;
+    margin-left:10px
+}
+.link-delete{
+    width:15%
 }
 
-.project-link a:hover {
+.project-link a.list{
+    text-decoration:none;
+    color: black;
+    text-align:left;    
+}
+.project-link a.delete{
+    background-color: #16ab97;
+    border-radius: 5px;
+    padding: 8px;
+    cursor:pointer
+}
+
+.project-link a.list:hover {
     color: #16ab97;
 }
 

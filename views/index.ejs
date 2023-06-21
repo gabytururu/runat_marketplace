@@ -35,22 +35,34 @@
                 <div class="projects-container">
                     <% if(proyectos.length>0){ %>
                         <% proyectos.forEach(proyecto =>{ %> 
-                            <div class="project-link"><a href="/proyect-list/<%=proyecto._id%>">
-                                <h3 class="proyeto-nombre"><%= proyecto.nombre%></h3>
-                                <p class="proyecto-categoria"><%=proyecto.categoria%></p>
-                                <p class="proyecto-description"><%=proyecto.description%></p>
-                            </a></div>
+                            <div class="project-link">
+                                <div class="link-container">
+                                    <a href="/proyect-list/<%=proyecto._id%>" class="list">
+                                        <h3 class="proyecto-nombre"><%= proyecto.nombre%></h3>
+                                        <p class="proyecto-categoria"><%=proyecto.categoria%></p>
+                                        <p class="proyecto-description"><%=proyecto.description%></p>
+                                    </a>
+                                </div>
+                                <!-- <div class="link-delete">
+                                    <a class="delete" data-doc="<%= proyecto._id%>">DELETE</a>
+                                </div> -->
+                                                  
+                            </div>
+                            
                     <% }) %>
                     <% } else{ %>
                         <p> ay perdón no tenemos proyectos aún :( </p>
                     <% } %>
                 </div>
             </div>
-
-       
-            
-      
     </div>
     <%-include ('./partials/footer.ejs')%>
+    <!-- <script>
+        const deletebtn = document.querySelector("a.delete")
+        deletebtn.addEventListener("click",()=>{
+            console.log(deletebtn.datasec.doc)
+        })
+
+    </script> -->
 </body>
 </html>

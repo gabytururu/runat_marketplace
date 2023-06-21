@@ -7,7 +7,10 @@
         <%-include ('./partials/nav.ejs')%>
         <main>
             <div class="wrap-projectlanding">
-                <h1>Nombre del Projecto</h1>
+                <div class="title-container">
+                    <h1><%=proyecto.nombre%></h1>
+                    <a class="delete-btn" data-doc="<%=proyecto._id%>">BORRAR</a>
+                </div>
                 <div class="project-pic">
                     <img src="/imgs/landing.jpg" alt="">
                 </div>
@@ -15,13 +18,13 @@
                     <h2>Sobre este proyecto</h2>
                     <hr class="line">
                     <div class="paragraph">                       
-                        <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at quisquam minus, recusandae tenetur provident esse officia, dolorum deserunt, vero earum saepe delectus nostrum atque non temporibus. Hic, labore modi!
+                        <p class="project-desc"><%=proyecto.description%>
                         </p>                        
                     </div>
                     <hr class="line">
                     <div>
                         <h3>Ubicación:</h3><span><p>Tabasco</p></span>
-                        <h3>Categoría:</h3><span><p>Ecoturismo</p></span>
+                        <h3>Categoría:</h3><span><p><%=proyecto.categoria%></p></span>
                         <h3>Actividades:</h3><span><p>Avistamiento de aves, camping, senderismo</p></span>
                     </div>
                     <div>
@@ -78,8 +81,27 @@
                 </div>
             </div>
         </main>
-            <%-include ('./partials/footer.ejs')%>
-        </div>  
+
+        <%-include ('./partials/footer.ejs')%>
+        <script>
+            const deleteBtn = document.querySelector('a.delete-btn')
+
+            deleteBtn.addEventListener('click',()=>{
+                console.log(deleteBtn)
+                console.log(deleteBtn.dataset.doc)
+                const endpoint=`/proyect-list/${deleteBtn.dataset.doc}`
+                console.log(endpoint)
+                fetch(endpoint,{
+                    method:'DELETE'
+                })
+                .then((response)=>response.json())
+                .then((data)=>{
+                    console.log(data)
+                    window.location.href = data.redirect
+                })
+                .catch(err => console.log(err))
+            })
+        </script>
     </body>
 
 </html>
