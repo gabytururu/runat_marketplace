@@ -30,7 +30,7 @@ app.post('/project-add',(req,res)=>{
     const proyecto = new Proyecto(req.body)
     proyecto.save()
     .then((result)=>{
-        console.log(result)
+        console.log('el nuevo proyecto:',result)
         res.redirect('/')
     })
     .catch((err)=>{console.log(err)})
